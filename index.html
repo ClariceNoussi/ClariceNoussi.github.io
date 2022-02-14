@@ -4,41 +4,92 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   <!-- Bootstrap CSS -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
+   <script type="text/javascript">
+    function validateForm()                                    
+{ 
+    var name = document.forms["myForm"]["name"];               
+    var email = document.forms["myForm"]["email"];    
+    var message = document.forms["myForm"]["message"];   
+   
+    if (name.value == "")                                  
+    { 
+        document.getElementById('errorname').innerHTML="Please enter a valid name";  
+        name.focus(); 
+        return false; 
+    }else{
+        document.getElementById('errorname').innerHTML="";  
+    }
+       
+    if (email.value == "")                                   
+    { 
+        document.getElementById('erroremail').innerHTML="Please enter a valid email address"; 
+        email.focus(); 
+        return false; 
+    }else{
+        document.getElementById('erroremail').innerHTML="";  
+    }
+   
+    if (email.value.indexOf("@", 0) < 0)                 
+    { 
+        document.getElementById('erroremail').innerHTML="Please enter a valid email address"; 
+        email.focus(); 
+        return false; 
+    } 
+   
+    if (email.value.indexOf(".", 0) < 0)                 
+    { 
+        document.getElementById('erroremail').innerHTML="Please enter a valid email address"; 
+        email.focus(); 
+        return false; 
+    } 
+   
+    if (message.value == "")                           
+    {
+        document.getElementById('errormsg').innerHTML="Please enter a valid message"; 
+        message.focus(); 
+        return false; 
+    }else{
+        document.getElementById('errormsg').innerHTML="";  
+    }
+   
+    return true; 
+}
+</script>
   </head>
   <body>`
    
       <!-- Navbar -->
-      <nav class="navbar bg-dark fixed-top">
-z      <ul class="nav justify-content-end">
+      <nav class="navbar bg-dark fixed-top width-100%">
+       <a class="nav-link active" style="color:white; text-align:left"; aria-current="page" href="#">HOME</a>
+      <ul class="nav justify-content-end">
   
-  <li class="nav-item">
-    <a class="nav-link" style="color:white"; href="#about">About</a>
+  <li class="nav-item" style ="text-align:right">
+    <a class="nav-link" style="color:white"; href="#about">ABOUT</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" style="color:white"; href="#skills">Skills</a>
+    <a class="nav-link" style="color:white"; href="#skills">SKILLS</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" style="color:white"; href="#projects">Projects</a>
+    <a class="nav-link" style="color:white"; href="#publications">PUBLICATIONS</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" style="color:white"; href="#publications">Publications</a>
+    <a class="nav-link" style="color:white"; href="#projects">CODING PROJECTS</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" style="color:white"; href="#contact">Get in touch</a>
+    <a class="nav-link" style="color:white"; href="#contact">GET IN TOUCH</a>
   </li>
   </li>
 </ul>
 </nav>
 
  <header>
-<div class="card bg-light text-white">
-  <img src="background.jpg" class="card-img" alt="school" width="800px" height="1000px">
+<div class="card bg-light text-white width-100%">
+  <img src="background.jpg" class="card-img" alt="school" width="100%" height="620px">
   <div class="card-img-overlay" style="text-align:left; margin-top: 33%;color:black">
     <h1 class="card-title">HELLO, WELCOME TO MY OFFICIAL WEBSITE</h1>
     <h5 class="card-text">I'm <B>Clarice DJOUWOUG NOUSSI.</B> Here you will find everything about my professional work</h5>
@@ -49,7 +100,7 @@ z      <ul class="nav justify-content-end">
 
 <!--SECTION -->
 <section id='about'>
-  <div class="container">
+  <div class="container-fluid width-100%">
     <div class="row">
       <div class="col my-5 mb-1">
     <h1 class="text-center text-decoration-underline">ABOUT ME</h1>
@@ -59,16 +110,16 @@ z      <ul class="nav justify-content-end">
       <img src="moi.jpg" width=300px; height=400px>
     </div>
       <div class="col col-7" style="border-left:3px solid #18c3da">
-        <p class ="pt-5 fs-4"><b>Clarice DJOUWOUG NOUSSI</b> Clarice DJOUWOUG NOUSSI is a PhD candidate in biology precisely in physiology   where I acquired many skills related physiology of many fupreclinical studies of medicinal plants in vitro and in vivo. Afterward I had a sudden desire to integrate the world of computional biology so, I registered for a python training bootcamp in order to get basis in programmation.  My qualities are determination, creativity, continuous learner, resilience and good team worker</p>
+        <p class ="pt-5 fs-2"><b>Clarice DJOUWOUG NOUSSI</b> Clarice DJOUWOUG NOUSSI is a PhD candidate in biology precisely in physiology   where I acquired many skills related physiology of many fupreclinical studies of medicinal plants in vitro and in vivo. Afterward I had a sudden desire to integrate the world of computional biology so, I registered for a python training bootcamp in order to get basis in programmation.  My qualities are determination, creativity, continuous learner, resilience and good team worker</p>
       </div>
     </div>
   </section>
   <!--SKILLS-->
   <section id='skills'></section>
-  <div class="container">
+  <div class="container-fluid width-100%">
     <div class="row">
       <div class="col my-5 mb-1">
-    <h1 class="text-center text-decoration-underline">TECHNICAL SKILLS</h1>
+    <h1 class="text-center text-decoration-underline">SKILLS</h1>
   </div>
   <div style="font-size:23px;">
       <ol style="columns:600px" >
@@ -87,125 +138,51 @@ z      <ul class="nav justify-content-end">
     </div>
   </section>
     
-
-  <!--MY BLOG-->
-  <section id='projects'bg-light >
-  <div class="container bg-light">
-    <div class="row">
-      <div class="col my-5 mb-1">
-    <h1 class="text-center text-decoration-underline">SOME TECHNICAL PROJECTS</h1>
-  </div>
-
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="col">
-      <div class="card h-100">
-        <img src="tictactoe.jpeg" class="card-img-top" alt="..." width="400px" height="200px">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below </p>
-          <a href="" class="btn btn-primary">See more</a>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card h-100">
-        <img src="Playthegame.png" class="card-img-top" alt="..." width="400px" height="200px">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a short card.</p>
-          <a href="" class="btn btn-primary">See more</a>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card h-100">
-        <img src="website2.png" class="card-img-top" alt="..." width="400px" height="200px">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text </p>
-          <a href="" class="btn btn-primary">See more</a>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card h-100">
-        <img src="realestate.png" class="card-img-top" alt="..." width="400px" height="200px">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text </p>
-          <a href="" class="btn btn-primary">See more</a>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card h-100">
-        <img src="animal.png" class="card-img-top" alt="..." width="400px" height="200px">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text </p>
-          <a href="" class="btn btn-primary">See more</a>
-        </div>
-  </div>
-  </div>
-  <div class="col">
-    <div class="card h-100">
-      <img src="plantresearch.png" class="card-img-top" alt="..." width="400px" height="200px">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text </p>
-        <a href="" class="btn btn-primary">See more</a>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </section>
 <!--publications-->
 <section id='publications'>
-  <div class="container">
+  <div class="containe-fluid width-100%r">
     <div class="row">
       <div class="col my-5 mb-1">
-    <h2 class="text-center text-decoration-underline"> SOME BIOLOGICAL PUBLICATIONS</h2>
+    <h2 class="text-center text-decoration-underline"> SOME SCIENTIFIC PUBLICATIONS</h2>
   </div>
 
   <div class="row row-cols-1 row-cols-md-4 g-4">
     <div class="col">
       <div class="card h-100">
-        <img src="ethno2021.png" class="card-img-top" alt="...">
+        <img src="ethno2021.png" class="card-img-top" alt="..." width="500px" height="200px">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text below </p>
+          <h5 class="card-title"></h5>
+          <p class="card-text"> </p>
           <a href="https://doi.org/10.1016/j.jep.2020.113424" class="btn btn-primary">See more</a>
         </div>
       </div>
     </div>
     <div class="col">
       <div class="card h-100">
-        <img src="evidence-base.png" class="card-img-top" alt="...">
+        <img src="evidence-base.png" class="card-img-top" alt="..." width="500px" height="200px">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a short card.</p>
+          <h5 class="card-title"></h5>
+          <p class="card-text"></p>
           <a href="https://doi.org/10.1155/2020/3160834" class="btn btn-primary">See more</a>
         </div>
       </div>
     </div>
     <div class="col">
       <div class="card h-100">
-        <img src="toxicity.png" class="card-img-top" alt="...">
+        <img src="toxicity.png" class="card-img-top" alt="..." width="500px" height="200px">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text </p>
+          <h5 class="card-title"></h5>
+          <p class="card-text"> </p>
           <a href="https://doi.org/10.1016/j.jep.2015.06.035" class="btn btn-primary">See more</a>
         </div>
       </div>
     </div>
     <div class="col">
       <div class="card h-100">
-        <img src="pharmacologia.png" class="card-img-top" alt="...">
+        <img src="pharmacologia.png" class="card-img-top" alt="..." width="500px" height="200px">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a longer card with supporting text </p>
+          <h5 class="card-title"></h5>
+          <p class="card-text"></p>
           <a href="https://docsdrive.com/pdfs/pharmacologia/2016/337-343.pdf" class="btn btn-primary">See more</a>
         </div>
       </div>
@@ -218,20 +195,88 @@ z      <ul class="nav justify-content-end">
   </div>
   </section>
 
-  <!--form and icons-->
-  <form id='contact' action='mailto:clarice.djouwoug@gmail.com'
-    method="POST"
-    enctype="multipart/form-data"
+  <!--MY BLOG-->
+  <section id='projects'bg-light >
+  <div class="container-fluid width-100% bg-light">
+    <div class="row">
+      <div class="col my-5 mb-1">
+    <h2 class="text-center text-decoration-underline">SOME CODING PROJECTS</h2>
+  </div>
 
-    name="EmailForm">
-    <div class="content">
-    
-      <div class="container">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card h-100">
+        <img src="tictactoe.jpeg" class="card-img-top" alt="..." width="400px" height="200px">
+        <div class="card-body">
+          <h5 class="card-title">Tic-Tac-Toe</h5>
+          <p class="card-text">Tic-tac-toe is a  game for two players, who select circle or cross. Each player fills the spaces in a 3×3 grid in turn. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is the winner.  </p>
+          <!--a href="" class="btn btn-primary">See more</a-->
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="Playthegame.png" class="card-img-top" alt="..." width="400px" height="200px">
+        <div class="card-body">
+          <h5 class="card-title">Play_The_Game</h5>
+          <p class="card-text">A game between a player and the computer where you have to guess the number that the computer has chosen at random between o and 9  </p>
+         <!--a href="" class="btn btn-primary">See more</a-->
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="website2.png" class="card-img-top" alt="..." width="400px" height="200px">
+        <div class="card-body">
+          <h5 class="card-title">Healthy_Website</h5>
+          <p class="card-text">This is an e-commerce website for slimming natural products. Some products could be recommended to the user according to his  of your body mass index(BMI)</p>
+          <!--a href="" class="btn btn-primary">See more</a-->
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="realestate.png" class="card-img-top" alt="..." width="400px" height="200px">
+        <div class="card-body">
+          <h5 class="card-title">Real_Estate app</h5>
+          <p class="card-text">The website which will find for you the best house for you and your family </p>
+          <!--a href="" class="btn btn-primary">See more</a-->
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="animal.png" class="card-img-top" alt="..." width="400px" height="200px">
+        <div class="card-body">
+          <h5 class="card-title">Animal_info</h5>
+          <p class="card-text">This is an educational platform for childdren to learn more about animals </p>
+          <!--a href="" class="btn btn-primary">See more</a-->
+        </div>
+  </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="plantresearch.png" class="card-img-top" alt="..." width="400px" height="200px">
+      <div class="card-body">
+        <h5 class="card-title">Plant_Research App</h5>
+        <p class="card-text">This is a platform  intended for previous research on medicinal plants (such as a database) and e-commerce of natural products made from plants </p>
+       <!--a href="" class="btn btn-primary">See more</a-->
+  </div>
+  
+  </div>
+  </div>
+  </div>
+  </div>
+  </section>* All the code related the previous projects are available on my github account since they are not yet online
+
+  <!--form and icons-->
+  <class id='contact'>
+      <div class="container-fluid width-100%s">
         <div class="row align-items-stretch justify-content-center no-gutters">
           <div class="col-md-7">
             <div class="form h-100 contact-wrap p-5">
               <h3 class="text-center">Let's Talk</h3>
-              <form class="mb-5" method="post" id="contactForm" name="contactForm">
+              <form name="myForm" action="mailto:clarice.djouwoug@gmail.com" onsubmit="return validateForm()" method="post" enctype="multipart/form-data">
                 <div class="row">
                   <div class="col-md-6 form-group mb-3">
                     <label for="" class="col-form-label">Name *</label>
@@ -256,19 +301,15 @@ z      <ul class="nav justify-content-end">
                     <textarea class="form-control" name="message" id="message" cols="30" rows="4"  placeholder="Write your message"></textarea>
                   </div>
                 </div>
-                <div class="row justify-content-center">
-                  <div class="col-md-5 form-group text-center">
-                    <input type="submit" value="Send Message" class="btn btn-block btn-primary rounded-0 py-2 px-4">
-                    <span class="submitting"></span>
-                  </div>
+                <tr>
+                  <td></td>
+                  <td>
+                     <input type="submit" value="Send" class="btn btn-primary">      
+                     <input type="reset" value="Reset" class="btn btn-primary"> 
+                  </td>
+               </tr>
                 </div>
               </form>
-  
-              <div id="form-message-warning mt-4"></div> 
-              <div id="form-message-success">
-                <!--Your message was sent, thank you!-->
-              </div>
-  
             </div>
           </div>
         </div>
@@ -279,17 +320,17 @@ z      <ul class="nav justify-content-end">
 </form> 
  </body>
 <!--footer-->
-<footer id="main-footer" class="py-4 bg-dark text-white text-center">
+<footer id="main-footer" class="py-4 bg-dark text-success text-center">
   <span> Made  by DJOUWOUG NOUSSI CLARICE</span>
     <br class="year"> Copyright&copy; November 2021 </br> 
-   <section id="contacts" class="p-3">
+   <section id="social media" class="p-3">
     <div class="container">
       <div class="row">
         <div class="col-md-4">
-          <i class="fas fa-phone"></i> (+237)676-11-33-55
+          <i class="fas fa-phone">(+237)676-11-33-55</i> 
         </div>
         <div class="col-md-4">
-          <i class="fas fa-envelope-open"></i> clarice.djouwoug@gmail.com
+          <i class="fas fa-envelope-open">clarice.djouwoug@gmail.com</i> 
         </div>
         <div class="col-md-4">
           <div class="social text-right">
@@ -314,16 +355,5 @@ z      <ul class="nav justify-content-end">
   </section>
 
 </footer>
-<script type="text/javascript">
-    function loadEvents() {
-        var mailString;
-        function updateMailString() {
-            mailString = '?email=' + encodeURIComponent($('#email').val())
-                + '&body=' + encodeURIComponent($('#message').val());
-            $('#mail-link').attr('href',  'mailto:clarice.djouwoug@gmail.com' + mailString);
-        }
-        $( "#subject" ).focusout(function() { updateMailString(); });
-        $( "#message" ).focusout(function() { updateMailString(); });
-        updateMailString();
-    }
-</script>
+</body>
+</html>
